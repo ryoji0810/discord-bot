@@ -1,7 +1,10 @@
 import discord
 import os
 from discord.ext import commands
+import dotenv
 from server import server_thread
+
+dotenv.load_dotenv()
 
 # 1. インテントの設定
 intents = discord.Intents.default()
@@ -9,7 +12,7 @@ intents.message_content = True  # メッセージ内容を読み取るために�
 intents.voice_states = True     # VCへの入退室を検知するために必須
 
 bot = commands.Bot(command_prefix="!", intents=intents)
-token = os.environ.get('TOKEN')
+TOKEN = os.environ.get("TOKEN")
 
 # 2. 設定：監視したいテキストチャンネルAとBのIDを入力してください
 TARGET_CHANNEL_IDS = [1454419719963541638, 1454099919744008324] 
@@ -79,4 +82,4 @@ async def on_voice_state_update(member, before, after):
 
 # 3. Botの起動
 server_thread()
-bot.run(token)
+bot.run(TOKEN)
