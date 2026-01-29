@@ -1,6 +1,7 @@
 import discord
 import os
 from discord.ext import commands
+from server import server_thread
 
 # 1. インテントの設定
 intents = discord.Intents.default()
