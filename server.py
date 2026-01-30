@@ -9,6 +9,10 @@ app = FastAPI()
 async def home(request=None):
     return "Bot is running!"
 
+@app.head("/")
+async def home_head():
+    return None
+
 def start():
 	uvicorn.run(app, host="0.0.0.0", port=8080)
 
