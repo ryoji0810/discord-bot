@@ -5,7 +5,7 @@ class VoiceProfile(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         # 監視したいテキストチャンネルID
-        self.target_channel_ids = [1409404155113639966, 1409404183336976464]
+        self.target_channel_ids = [1454419719963541638, 1454099919744008324]
 
     @commands.Cog.listener()
     async def on_voice_state_update(self, member, before, after):
