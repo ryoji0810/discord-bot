@@ -6,8 +6,8 @@ from server import server_thread
 
 dotenv.load_dotenv()
 TOKEN = os.environ.get("TOKEN")
-MY_GUILD = discord.Object(id=1409401336943874130)
-
+GUILD = os.environ.get("SERVERID")
+MY_GUILD = discord.Object(id=GUILD)
 
 class DiscordBot(commands.Bot):
     def __init__(self):
@@ -36,4 +36,4 @@ class DiscordBot(commands.Bot):
 if __name__ == "__main__":
     server_thread()
     bot = DiscordBot()
-    bot.run('MTQ2NjAzMjg2OTU1NzI3NjcyNQ.G4bSQ1.r_4KlqqhESSZfhjp0VBUtI18yG0Iuf-QkTdNlg')
+    bot.run(TOKEN)
