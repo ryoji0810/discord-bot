@@ -6,7 +6,7 @@ from server import server_thread
 
 dotenv.load_dotenv()
 TOKEN = os.environ.get("TOKEN")
-GUILD = os.environ.get("SERVERID")
+GUILD = os.environ.get("GUILD")
 MY_GUILD = discord.Object(id=GUILD)
 
 class DiscordBot(commands.Bot):
