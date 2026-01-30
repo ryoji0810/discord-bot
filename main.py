@@ -7,7 +7,7 @@ from server import server_thread
 dotenv.load_dotenv()
 TOKEN = os.environ.get("TOKEN")
 
-class MyBot(commands.Bot):
+class DiscordBot(commands.Bot):
     def __init__(self):
         intents = discord.Intents.default()
         intents.message_content = True
@@ -27,5 +27,5 @@ class MyBot(commands.Bot):
 
 if __name__ == "__main__":
     server_thread()
-    bot = MyBot()
+    bot = DiscordBot()
     bot.run(TOKEN)
