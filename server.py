@@ -5,8 +5,8 @@ import uvicorn
 
 app = FastAPI()
 
-@app.route('/', methods=['GET', 'HEAD']) # HEADを追加
-def home():
+@app.get('/') # route ではなく get
+async def home(request=None):
     return "Bot is running!"
 
 def start():
