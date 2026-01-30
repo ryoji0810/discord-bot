@@ -49,7 +49,7 @@ class VoiceProfile(commands.Cog):
                 # --- ボタン（URLリンク）の作成 ---
                 view = discord.ui.View()
                 btn = discord.ui.Button(
-                    label="メッセージへ移動",
+                    label="プロフィールへ移動",
                     url=latest_message.jump_url,
                     style=discord.ButtonStyle.link
                 )
