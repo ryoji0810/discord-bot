@@ -5,9 +5,9 @@ import uvicorn
 
 app = FastAPI()
 
-@app.route('/', methods=['GET', 'HEAD'])
-async def root():
-	return {"message": "Server is Online."}
+@app.route('/', methods=['GET', 'HEAD']) # HEADを追加
+def home():
+    return "Bot is running!"
 
 def start():
 	uvicorn.run(app, host="0.0.0.0", port=8080)
